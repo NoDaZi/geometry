@@ -13,39 +13,103 @@
 #ifndef NODAZI_GEOMETRY__POINT__2D__HPP_
 #define NODAZI_GEOMETRY__POINT__2D__HPP_
 
-namespace nodazi::geometry
+namespace nodazi::geometry {}
 
-    class Point2D {
+/**
+ * @brief Point class with 2-dimension
+ */
+class Point2D {
  public:
-  /*
+  /**
    * @brief Construct a new Point2D object
    */
   Point2D() = default;
-  /*
+  /**
    * @brief Construct a new Point2D object with x , y value
    * @param x Double type x coordinate value
    * @param y Double type y coordinate value
    */
   Point2D(double x, double y);
-
+  /**
+   * @brief Copy Construct a new Point2D object with other Point2D object
+   * @param other Point2D object
+   */
   Point2D(const Point2D& other) = default;
-
+  /**
+   * @brief Move Construct a new Point2D object with other Point2D object
+   * @param other Point2D object
+   */
   Point2D(Point2D&& other)->Point2D = default;
-
+  /**
+   * @brief Destroy the Point2D object
+   */
   virtual ~Point2D() = default;
 
-  auto CalculateDistance(const Point2D& target) const -> double {
-    void SetX(double x) void SetY(double y)
+  /**
+   * @brief  Copy assignment operator
+   * @param other Point2D object
+   * @return Point2D& Reference of Point2D object
+   */
+  // Point2D new_one = old_one;
+  // new_one.GetX();
+  // new_one.GetY();
+  auto operator=(const Point2D& other) -> Point2D& = default;
 
-        auto GetX() const -> double;
-    auto GetY() const -> double;
+  /**
+   * @brief Move assignment operator
+   * @param other Point2D object
+   * @return Point2D& Reference of Point2D object
+   */
+  auto operator=(Point2D&& other) -> Point2D& = default;
+  /**
+   * @brief Calculate distance between this point and target point
+   * @param target Other Point2D object to calculate distance
+   * @return double Euclidean distance between this point and target point
+   */
+  [[nodiscard]] static auto CalculateDistance(const Point2D& target) const
+      -> double;
 
-   protected:
-   private:
-    /**
-     *brief Point class with 2-dimension
-     */
-  }
-}  // namespace nodazi::geometry
+  /**
+   * @brief Set x coordinate value
+   * @param x Double type input x coordinate value
+   */
+  void SetX(double x);
+  /**
+   * @brief Set y coordinate value
+   * @param y Double type input y coordinate value
+   */
+  void SetY(double y);
+  /**
+   * @brief Get x coordinate value of this point
+   * @return double x coordinate value of this point
+   */
+  [[nodiscard]] auto GetX() const -> double;
+  /**
+   * @brief Get y coordinate value of this point
+   * @return double y coordinate value of this point
+   */
+  [[nodiscard]] auto GetY() const -> double;
+  /**
+   * @brief
+   * @param other
+   * @return Point2D
+   */
+  auto operator+(const Point2D& other) const -> Point2D;
+  auto operator-(const Point2D& other) const -> Point2D;
+
+  auto operator+=(const Point2D& other) -> Point2D&;
+  auto operator-=(const Point2D& other) -> Point2D&;
+
+  auto operator*(double scalar) const -> Point2D;
+  auto operator/(double scalar) const -> Point2D;
+
+  auto operator==(const Point2D& other) const -> bool;
+  auto operator!=(const Point2D& other) const -> bool;
+
+ protected:
+ private:
+  double x_{0.0};
+  double y_{0.0};
+}
 
 #endif
