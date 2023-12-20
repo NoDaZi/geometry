@@ -1,3 +1,3 @@
-# cpp_project_template
+# nodazi_geometry
 
-The template for cpp projects
+The template for geometry.
