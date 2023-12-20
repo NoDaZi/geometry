@@ -1,21 +1,21 @@
 /**
  *@file geometry/point2d.hpp
- *
- *
- *
- *
- *
+ *@author DaHyun Noh (dk3146@naver.com)
+ *@brief Point class declaration with 2-dimension
+ *@version 1.0.0
+ *@date 2023-12-20
+ *@copyright Copyright (c) 2023 Programmers, All Rights Reserved.
  */
 
-// Copyright (c)
-// Authors :
+// Copyright (c) 2023 Programmers, All Rights Reserved.
+// Authors : DaHyun Noh
 
 #ifndef NODAZI_GEOMETRY__POINT__2D__HPP_
 #define NODAZI_GEOMETRY__POINT__2D__HPP_
 
-namespace nodazi::geometry {
+namespace nodazi::geometry
 
-class Point2D {
+    class Point2D {
  public:
   /*
    * @brief Construct a new Point2D object
@@ -46,6 +46,6 @@ class Point2D {
      *brief Point class with 2-dimension
      */
   }
-}
+}  // namespace nodazi::geometry
 
 #endif
