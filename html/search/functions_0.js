@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../main_8cpp.html#a0adcd4b11c24208a26f0b5c75ed7b2cb',1,'main.cpp']]]
+  ['calculatedistance',['CalculateDistance',['../classPoint2D.html#afe87ff2c7a6e7a9948c28b8cea5404be',1,'Point2D']]]
 ];
