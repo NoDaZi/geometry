@@ -12,6 +12,7 @@
 
 #include "geometry/point2d.hpp"
 
+#include <cmath>
 #include <limits>
 #include <stdexcept>
 
@@ -29,5 +30,22 @@ TEST(GeometryPoint2D, AssignmentOperator) {
   Point2D point1;
   auto point2 = point1;
   auto point3 = std::move(Point2D());
+}
+
+TEST(GeometryPoint2D, CalculateDistance) {
+  constexpr uint32_t kTestCount = 10000U;
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kSourceX = static_cast<double>(std::rand());
+    const auto kSourceY = static_cast<double>(std::rand());
+    const auto kTargetX = static_cast<double>(std::rand());
+    const auto kTargetY = static_cast<double>(std::rand());
+
+    Point2D source(kSourceX, kSourceY);
+    Point2D target(kTargetX, kTargetY);
+
+    EXPECT_FLOAT_EQ(std ::sqrt((kSourceX - kTargetX) * (kSourceX - kTargetX) +
+                               (kSourceY - kTargetY) * (kSourceY - kTargetY)),
+                    source.CalculateDistance(target));
+  }
 }
 }  // namespace nodazi::geometry
