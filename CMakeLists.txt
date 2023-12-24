@@ -93,6 +93,7 @@ add_subdirectory(${${PROJECT_NAME}_APPLICATION_PATH})
 
 set(${PROJECT_NAME}_SOURCE_FILES
   src/point2d.cpp
+  src/distance.cpp
   # ! Add source files here
 )
 
@@ -109,8 +110,7 @@ ${${PROJECT_NAME}_SOURCE_FILES}
 # ! If you want to add include directories and link libraries, use the following code
 target_include_directories(${PROJECT_NAME} PUBLIC
 ${${PROJECT_NAME}_INCLUDE_PATH}
-
-! Add include path here
+#! Add include path here
 )
 # target_link_libraries(${PROJECT_NAME} PRIVATE
 
@@ -118,6 +118,7 @@ ${${PROJECT_NAME}_INCLUDE_PATH}
 # )
 # add_dependencies(${PROJECT_NAME}
 include(cmake/create_documents.cmake)
+add_subdirectory(${${PROJECT_NAME}_TEST_PATH})
 
 # ! Add dependencies here
 # )
