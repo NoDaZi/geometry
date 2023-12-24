@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['point2d',['Point2D',['../classPoint2D.html',1,'']]]
+  ['distance',['Distance',['../classnodazi_1_1geometry_1_1Distance.html',1,'nodazi::geometry']]]
 ];

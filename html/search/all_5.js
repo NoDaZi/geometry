@@ -1,6 +1,12 @@
 var searchData=
 [
-  ['point2d',['Point2D',['../classPoint2D.html',1,'Point2D'],['../classPoint2D.html#a8362e258904c9d8d43c5ed9659bd9736',1,'Point2D::Point2D()=default'],['../classPoint2D.html#ac9d8daeb64c1e93325c7868d42da6e44',1,'Point2D::Point2D(double x, double y)'],['../classPoint2D.html#ad21b5bf0338b8fd823a7ff81133d913f',1,'Point2D::Point2D(const Point2D &amp;other)=default'],['../classPoint2D.html#ac7cd1bf13a69932ae5959e305e66f087',1,'Point2D::Point2D(Point2D &amp;&amp;other) -&gt; Point2D=default']]],
-  ['point2d_2ecpp',['point2d.cpp',['../point2d_8cpp.html',1,'']]],
-  ['point2d_2ehpp',['point2d.hpp',['../point2d_8hpp.html',1,'']]]
+  ['operator_21_3d',['operator!=',['../classnodazi_1_1geometry_1_1Point2D.html#a390a647706fb56efad0207c0b4472cb2',1,'nodazi::geometry::Point2D']]],
+  ['operator_2a',['operator*',['../classnodazi_1_1geometry_1_1Point2D.html#a80c393d665e1f4a58a6cfdaaca18ca05',1,'nodazi::geometry::Point2D']]],
+  ['operator_2b',['operator+',['../classnodazi_1_1geometry_1_1Point2D.html#ae683760e6bc831bf3c7af2d1d596c48e',1,'nodazi::geometry::Point2D']]],
+  ['operator_2b_3d',['operator+=',['../classnodazi_1_1geometry_1_1Point2D.html#a034631b6fb8b18afa2f239d04d1fcfef',1,'nodazi::geometry::Point2D']]],
+  ['operator_2d',['operator-',['../classnodazi_1_1geometry_1_1Point2D.html#a2d09904d724d66ba7d8773db313b2689',1,'nodazi::geometry::Point2D']]],
+  ['operator_2d_3d',['operator-=',['../classnodazi_1_1geometry_1_1Point2D.html#a5b75b8e702474042acc4fcd98ee0780a',1,'nodazi::geometry::Point2D']]],
+  ['operator_2f',['operator/',['../classnodazi_1_1geometry_1_1Point2D.html#aa344c5a2e0bb05e2681b42a626539427',1,'nodazi::geometry::Point2D']]],
+  ['operator_3d',['operator=',['../classnodazi_1_1geometry_1_1Point2D.html#a8005565301ed825551e6eb5cd7bf8a37',1,'nodazi::geometry::Point2D::operator=(const Point2D &amp;other) -&gt; Point2D &amp;=default'],['../classnodazi_1_1geometry_1_1Point2D.html#a119c7dcc555b948c2e2b03d321f86f71',1,'nodazi::geometry::Point2D::operator=(Point2D &amp;&amp;other) -&gt; Point2D &amp;=default']]],
+  ['operator_3d_3d',['operator==',['../classnodazi_1_1geometry_1_1Point2D.html#a702b4ec9774eeb18939a95668dcd4a44',1,'nodazi::geometry::Point2D']]]
 ];

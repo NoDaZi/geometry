@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['getx',['GetX',['../classPoint2D.html#a244153db3b81c8a843aa5a2ed7cde05d',1,'Point2D']]],
-  ['gety',['GetY',['../classPoint2D.html#a573a447473286747dff18d7a4f6378ef',1,'Point2D']]]
+  ['getx',['GetX',['../classnodazi_1_1geometry_1_1Point2D.html#a56c16bad09d36b919736e74dccdea1b6',1,'nodazi::geometry::Point2D']]],
+  ['gety',['GetY',['../classnodazi_1_1geometry_1_1Point2D.html#aa37444e552e7ce62045e7232fcf33c68',1,'nodazi::geometry::Point2D']]]
 ];
