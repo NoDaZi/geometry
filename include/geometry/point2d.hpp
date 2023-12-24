@@ -68,19 +68,20 @@ class Point2D {
    * @param target Other Point2D object to calculate distance
    * @return double Euclidean distance between this point and target point
    */
-  auto CalculateDistance(const Point2D& target) const -> double;
+  [[nodiscard]] auto CalculateDistance(const Point2D& target) const -> double;
+
   [[nodiscard]] static auto CalculateDistance(const Point2D& lhs,
                                               const Point2D& rhs) -> double;
   /**
    * @brief Set x coordinate value
    * @param x Double type input x coordinate value
    */
-  void SetX(double x);
+  void SetX(double input_x);
   /**
    * @brief Set y coordinate value
    * @param y Double type input y coordinate value
    */
-  void SetY(double y);
+  void SetY(double input_y);
   /**
    * @brief Get x coordinate value of this point
    * @return double x coordinate value of this point
