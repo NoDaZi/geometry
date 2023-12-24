@@ -12,6 +12,7 @@
 
 #include "geometry/point2d.hpp"
 
+#include <cmath>
 #include <limits>
 #include <stdexcept>
 
@@ -19,5 +20,9 @@
 
 namespace nodazi::geometry {
 Point2D::Point2D(double input_x, double input_y) : x_(input_x), y_(input_y){};
+
+auto Point2D::CalculateDistance(const Point2D& target) const -> double {
+  return std::sqrt(std::pow((x_ - target.x_), 2) + std::pow(y_ - target.y_, 2));
+}
 
 }  // namespace nodazi::geometry
