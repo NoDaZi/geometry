@@ -83,6 +83,7 @@ $(document).ready(function(){initNavTree('classnodazi_1_1geometry_1_1Point2D.htm
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classnodazi_1_1geometry_1_1Point2D-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">nodazi::geometry::Point2D Class Reference</div>  </div>
@@ -117,6 +118,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a119c7dcc555b948c2e2b03d321f86f71"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnodazi_1_1geometry_1_1Point2D.html#a119c7dcc555b948c2e2b03d321f86f71">operator=</a> (<a class="el" href="classnodazi_1_1geometry_1_1Point2D.html">Point2D</a> &amp;&amp;other) -&gt; <a class="el" href="classnodazi_1_1geometry_1_1Point2D.html">Point2D</a> &amp;=default</td></tr>
 <tr class="memdesc:a119c7dcc555b948c2e2b03d321f86f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move assignment operator.  <a href="#a119c7dcc555b948c2e2b03d321f86f71">More...</a><br /></td></tr>
 <tr class="separator:a119c7dcc555b948c2e2b03d321f86f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab46f2e52664e43b96a9664cdae89ff27"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnodazi_1_1geometry_1_1Point2D.html#ab46f2e52664e43b96a9664cdae89ff27">CalculateDistance</a> (const <a class="el" href="classnodazi_1_1geometry_1_1Point2D.html">Point2D</a> &amp;target) const -&gt; double</td></tr>
+<tr class="memdesc:ab46f2e52664e43b96a9664cdae89ff27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate distance between this point and target point.  <a href="#ab46f2e52664e43b96a9664cdae89ff27">More...</a><br /></td></tr>
+<tr class="separator:ab46f2e52664e43b96a9664cdae89ff27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cd6ebb174a5b60665cc96f657ffc52b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnodazi_1_1geometry_1_1Point2D.html#a9cd6ebb174a5b60665cc96f657ffc52b">SetX</a> (double x)</td></tr>
 <tr class="memdesc:a9cd6ebb174a5b60665cc96f657ffc52b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set x coordinate value.  <a href="#a9cd6ebb174a5b60665cc96f657ffc52b">More...</a><br /></td></tr>
 <tr class="separator:a9cd6ebb174a5b60665cc96f657ffc52b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,6 +149,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a702b4ec9774eeb18939a95668dcd4a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a390a647706fb56efad0207c0b4472cb2"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnodazi_1_1geometry_1_1Point2D.html#a390a647706fb56efad0207c0b4472cb2">operator!=</a> (const <a class="el" href="classnodazi_1_1geometry_1_1Point2D.html">Point2D</a> &amp;other) const -&gt; bool</td></tr>
 <tr class="separator:a390a647706fb56efad0207c0b4472cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a352e8294443dd5fb0981354e147e4eb0"><td class="memItemLeft" align="right" valign="top">static auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnodazi_1_1geometry_1_1Point2D.html#a352e8294443dd5fb0981354e147e4eb0">CalculateDistance</a> (const <a class="el" href="classnodazi_1_1geometry_1_1Point2D.html">Point2D</a> &amp;lhs, const <a class="el" href="classnodazi_1_1geometry_1_1Point2D.html">Point2D</a> &amp;rhs) -&gt; double</td></tr>
+<tr class="separator:a352e8294443dd5fb0981354e147e4eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Point class with 2-dimension. </p>
@@ -313,6 +322,69 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ab46f2e52664e43b96a9664cdae89ff27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab46f2e52664e43b96a9664cdae89ff27">&#9670;&nbsp;</a></span>CalculateDistance() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto nodazi::geometry::Point2D::CalculateDistance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnodazi_1_1geometry_1_1Point2D.html">Point2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>target</em></td><td>)</td>
+          <td> const -&gt;  double</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Calculate distance between this point and target point. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">target</td><td>Other <a class="el" href="classnodazi_1_1geometry_1_1Point2D.html" title="Point class with 2-dimension. ">Point2D</a> object to calculate distance </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double Euclidean distance between this point and target point </dd></dl>
+
+</div>
+</div>
+<a id="a352e8294443dd5fb0981354e147e4eb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a352e8294443dd5fb0981354e147e4eb0">&#9670;&nbsp;</a></span>CalculateDistance() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static auto nodazi::geometry::Point2D::CalculateDistance </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnodazi_1_1geometry_1_1Point2D.html">Point2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>lhs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnodazi_1_1geometry_1_1Point2D.html">Point2D</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> -&gt;  double</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a56c16bad09d36b919736e74dccdea1b6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a56c16bad09d36b919736e74dccdea1b6">&#9670;&nbsp;</a></span>GetX()</h2>
 

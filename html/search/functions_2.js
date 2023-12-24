@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../src_2main_8cpp.html#a0adcd4b11c24208a26f0b5c75ed7b2cb',1,'main() -&gt; int32_t:&#160;main.cpp'],['../test_2unit_2main_8cpp.html#a359d43bec3235b4932eac2b039e03ffb',1,'main(int32_t argc, char **argv) -&gt; int32_t:&#160;main.cpp']]]
+  ['getx',['GetX',['../classnodazi_1_1geometry_1_1Point2D.html#a56c16bad09d36b919736e74dccdea1b6',1,'nodazi::geometry::Point2D']]],
+  ['gety',['GetY',['../classnodazi_1_1geometry_1_1Point2D.html#aa37444e552e7ce62045e7232fcf33c68',1,'nodazi::geometry::Point2D']]]
 ];

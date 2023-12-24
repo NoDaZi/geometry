@@ -5,6 +5,7 @@ var classnodazi_1_1geometry_1_1Point2D =
     [ "Point2D", "classnodazi_1_1geometry_1_1Point2D.html#a8e00fad6dbd18c67126fd89f536c6a26", null ],
     [ "Point2D", "classnodazi_1_1geometry_1_1Point2D.html#a97248e3f9ad8c1211fcfb0b6bd252242", null ],
     [ "~Point2D", "classnodazi_1_1geometry_1_1Point2D.html#ae8a97cc93bcc36dcfdadd56e5a2d4e1a", null ],
+    [ "CalculateDistance", "classnodazi_1_1geometry_1_1Point2D.html#ab46f2e52664e43b96a9664cdae89ff27", null ],
     [ "GetX", "classnodazi_1_1geometry_1_1Point2D.html#a56c16bad09d36b919736e74dccdea1b6", null ],
     [ "GetY", "classnodazi_1_1geometry_1_1Point2D.html#aa37444e552e7ce62045e7232fcf33c68", null ],
     [ "operator!=", "classnodazi_1_1geometry_1_1Point2D.html#a390a647706fb56efad0207c0b4472cb2", null ],
