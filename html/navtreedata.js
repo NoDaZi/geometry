@@ -3,11 +3,7 @@ var NAVTREE =
   [ "Geometry", "index.html", [
     [ "nodazi_geometry", "md_README.html", null ],
     [ "Namespaces", null, [
-      [ "Namespace List", "namespaces.html", "namespaces" ],
-      [ "Namespace Members", "namespacemembers.html", [
-        [ "All", "namespacemembers.html", null ],
-        [ "Functions", "namespacemembers_func.html", null ]
-      ] ]
+      [ "Namespace List", "namespaces.html", "namespaces" ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
