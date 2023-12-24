@@ -48,4 +48,70 @@ TEST(GeometryPoint2D, CalculateDistance) {
                     source.CalculateDistance(target));
   }
 }
+
+TEST(GeometryPoint2D, StaticCalculateDistance) {
+  constexpr uint32_t kTestCount = 10000U;
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kSourceX = static_cast<double>(std::rand());
+    const auto kSourceY = static_cast<double>(std::rand());
+    const auto kTargetX = static_cast<double>(std::rand());
+    const auto kTargetY = static_cast<double>(std::rand());
+
+    Point2D source(kSourceX, kSourceY);
+    Point2D target(kTargetX, kTargetY);
+
+    EXPECT_FLOAT_EQ(std ::sqrt((kSourceX - kTargetX) * (kSourceX - kTargetX) +
+                               (kSourceY - kTargetY) * (kSourceY - kTargetY)),
+                    Point2D::CalculateDistance(source, target));
+  }
+}
+
+TEST(GeometryPoint2D, GetX) {
+  constexpr uint32_t kTestCount = 10000U;
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kSourceX = static_cast<double>(std::rand());
+
+    Point2D source(kSourceX, 0);
+
+    EXPECT_FLOAT_EQ(kSourceX, source.GetX());
+  }
+}
+
+TEST(GeometryPoint2D, GetY) {
+  constexpr uint32_t kTestCount = 10000U;
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kSourceY = static_cast<double>(std::rand());
+
+    Point2D source(0, kSourceY);
+
+    EXPECT_FLOAT_EQ(kSourceY, source.GetY());
+  }
+}
+
+TEST(GeometryPoint2D, SetX) {
+  constexpr uint32_t kTestCount = 10000U;
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kSourceX = static_cast<double>(std::rand());
+
+    Point2D source;
+
+    source.SetX(kSourceX);
+
+    EXPECT_FLOAT_EQ(kSourceX, source.GetX());
+  }
+}
+
+TEST(GeometryPoint2D, SetY) {
+  constexpr uint32_t kTestCount = 10000U;
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kSourceY = static_cast<double>(std::rand());
+
+    Point2D source;
+
+    source.SetY(kSourceY);
+
+    EXPECT_FLOAT_EQ(kSourceY, source.GetY());
+  }
+}
+
 }  // namespace nodazi::geometry
