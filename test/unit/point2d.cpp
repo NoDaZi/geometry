@@ -18,7 +18,11 @@
 
 #include "gtest/gtest.h"
 
+namespace {
+constexpr uint32_t kTestCount = 10000U;
+}
 namespace nodazi::geometry {
+
 TEST(GeometryPoint2D, Constructor) {
   Point2D point1;
   Point2D point2(0.0, 1.0);
@@ -33,7 +37,6 @@ TEST(GeometryPoint2D, AssignmentOperator) {
 }
 
 TEST(GeometryPoint2D, CalculateDistance) {
-  constexpr uint32_t kTestCount = 10000U;
   for (uint32_t i = 0; i < kTestCount; ++i) {
     const auto kSourceX = static_cast<double>(std::rand());
     const auto kSourceY = static_cast<double>(std::rand());
@@ -50,7 +53,6 @@ TEST(GeometryPoint2D, CalculateDistance) {
 }
 
 TEST(GeometryPoint2D, StaticCalculateDistance) {
-  constexpr uint32_t kTestCount = 10000U;
   for (uint32_t i = 0; i < kTestCount; ++i) {
     const auto kSourceX = static_cast<double>(std::rand());
     const auto kSourceY = static_cast<double>(std::rand());
@@ -67,7 +69,6 @@ TEST(GeometryPoint2D, StaticCalculateDistance) {
 }
 
 TEST(GeometryPoint2D, GetX) {
-  constexpr uint32_t kTestCount = 10000U;
   for (uint32_t i = 0; i < kTestCount; ++i) {
     const auto kSourceX = static_cast<double>(std::rand());
 
@@ -78,7 +79,6 @@ TEST(GeometryPoint2D, GetX) {
 }
 
 TEST(GeometryPoint2D, GetY) {
-  constexpr uint32_t kTestCount = 10000U;
   for (uint32_t i = 0; i < kTestCount; ++i) {
     const auto kSourceY = static_cast<double>(std::rand());
 
@@ -89,7 +89,6 @@ TEST(GeometryPoint2D, GetY) {
 }
 
 TEST(GeometryPoint2D, SetX) {
-  constexpr uint32_t kTestCount = 10000U;
   for (uint32_t i = 0; i < kTestCount; ++i) {
     const auto kSourceX = static_cast<double>(std::rand());
 
@@ -102,7 +101,6 @@ TEST(GeometryPoint2D, SetX) {
 }
 
 TEST(GeometryPoint2D, SetY) {
-  constexpr uint32_t kTestCount = 10000U;
   for (uint32_t i = 0; i < kTestCount; ++i) {
     const auto kSourceY = static_cast<double>(std::rand());
 
