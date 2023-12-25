@@ -120,11 +120,34 @@ class Point2D {
    * @return _x -= other._x & _y -= other._y
    */
   auto operator-=(const Point2D& other) -> void;
-
+  /**
+   * @brief
+   * @param other
+   * @return Point2D class = this * scalar
+   */
   auto operator*(double scalar) const -> Point2D;
+  /**
+   * @brief
+   * @param other
+   * @return Point2D class = this / scalar
+   */
   auto operator/(double scalar) const -> Point2D;
 
+  /**
+   * @brief
+   *
+   * @param other
+   * @return true if this == other
+   * @return false if this != other
+   */
   auto operator==(const Point2D& other) const -> bool;
+  /**
+   * @brief
+   *
+   * @param other
+   * @return true if this == other
+   * @return false if this != other
+   */
   auto operator!=(const Point2D& other) const -> bool;
 
  protected:
