@@ -12,4 +12,11 @@
 
 #include "geometry/distance.hpp"
 
+#include <cmath>
 #include <cstdint>
+#include <limits>
+#include <stdexcept>
+
+#include "gtest/gtest.h"
+
+namespace nodazi::geometry {}  // namespace nodazi::geometry
