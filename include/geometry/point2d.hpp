@@ -95,21 +95,21 @@ class Point2D {
 
   /**
    * @brief Plus this and other, and set their values to another Class
-   * @param other
+   * @param Point2D& other
    * @return Point2D class = this + other
    */
   auto operator+(const Point2D& other) const -> Point2D;
 
   /**
    * @brief Minus this and other, and set their values to another Class
-   * @param other
+   * @param Point2D& other
    * @return Point2D class = this - other
    */
   auto operator-(const Point2D& other) const -> Point2D;
 
   /**
    * @brief this += other
-   * @param other
+   * @param Point2D& other
    * @return x_ += other.x_ & y_ += other.y_
    */
   auto operator+=(const Point2D& other) -> void;
@@ -122,20 +122,20 @@ class Point2D {
   auto operator-=(const Point2D& other) -> void;
   /**
    * @brief Multiply x,y values with scalar
-   * @param other
+   * @param scalar
    * @return Point2D class = this * scalar
    */
   auto operator*(double scalar) const -> Point2D;
   /**
    * @brief Divide x,y values with scalar
-   * @param other
+   * @param scalar
    * @return Point2D class = this / scalar
    */
   auto operator/(double scalar) const -> Point2D;
 
   /**
    * @brief Return a boolean indicating whether two classes are equal.
-   * @param other
+   * @param Point2D& other
    * @return true if this == other
    * @return false if this != other
    */
@@ -143,7 +143,7 @@ class Point2D {
 
   /**
    * @brief Return a boolean indicating whether two classes are not equal.
-   * @param other
+   * @param Point2D& other
    * @return true if this != other
    * @return false if this == other
    */
