@@ -119,14 +119,14 @@ TEST(GeometryPoint2D, OperatorPlus) {
     const auto kTargetX = static_cast<double>(std::rand());
     const auto kTargetY = static_cast<double>(std::rand());
 
-    Point2D addedPoint;
+    Point2D plusPoint;
     Point2D source(kSourceX, kSourceY);
     Point2D target(kTargetX, kTargetY);
 
-    addedPoint = source + target;
+    plusPoint = source + target;
 
-    EXPECT_FLOAT_EQ(addedPoint.GetX(), kSourceX + kTargetX);
-    EXPECT_FLOAT_EQ(addedPoint.GetY(), kSourceY + kTargetY);
+    EXPECT_FLOAT_EQ(plusPoint.GetX(), kSourceX + kTargetX);
+    EXPECT_FLOAT_EQ(plusPoint.GetY(), kSourceY + kTargetY);
   }
 }
 
@@ -137,14 +137,14 @@ TEST(GeometryPoint2D, OperatorMinus) {
     const auto kTargetX = static_cast<double>(std::rand());
     const auto kTargetY = static_cast<double>(std::rand());
 
-    Point2D addedPoint;
+    Point2D minusPoint;
     Point2D source(kSourceX, kSourceY);
     Point2D target(kTargetX, kTargetY);
 
-    addedPoint = source - target;
+    minusPoint = source - target;
 
-    EXPECT_FLOAT_EQ(addedPoint.GetX(), kSourceX - kTargetX);
-    EXPECT_FLOAT_EQ(addedPoint.GetY(), kSourceY - kTargetY);
+    EXPECT_FLOAT_EQ(minusPoint.GetX(), kSourceX - kTargetX);
+    EXPECT_FLOAT_EQ(minusPoint.GetY(), kSourceY - kTargetY);
   }
 }
 
@@ -178,6 +178,21 @@ TEST(GeometryPoint2D, OperatorMinusEqual) {
 
     EXPECT_FLOAT_EQ(source.GetX(), kSourceX - kTargetX);
     EXPECT_FLOAT_EQ(source.GetY(), kSourceY - kTargetY);
+  }
+}
+
+TEST(GeometryPoint2D, OperatorMultiply) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kSourceX = static_cast<double>(std::rand());
+    const auto kSourceY = static_cast<double>(std::rand());
+    const auto kMutiple = static_cast<double>(std::rand());
+
+    Point2D multipliedPoint;
+    Point2D source(kSourceX, kSourceY);
+    multipliedPoint = source * kMutiple;
+
+    EXPECT_FLOAT_EQ(multipliedPoint.GetX(), kSourceX * kMutiple);
+    EXPECT_FLOAT_EQ(multipliedPoint.GetY(), kSourceY * kMutiple);
   }
 }
 
