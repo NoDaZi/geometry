@@ -92,13 +92,14 @@ class Point2D {
    * @return double y coordinate value of this point
    */
   [[nodiscard]] auto GetY() const -> double;
+
   /**
    * @brief
    * @param other
-   * @return Point2D
+   * @return _x += other._x & _y += other._y
    */
-  auto operator+(const Point2D& other) const -> Point2D;
-  auto operator-(const Point2D& other) const -> Point2D;
+  auto operator+(const Point2D& other) -> void;
+  auto operator-(const Point2D& other) -> void;
 
   auto operator+=(const Point2D& other) -> Point2D&;
   auto operator-=(const Point2D& other) -> Point2D&;
