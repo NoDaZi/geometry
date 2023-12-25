@@ -112,4 +112,133 @@ TEST(GeometryPoint2D, SetY) {
   }
 }
 
+TEST(GeometryPoint2D, OperatorPlus) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kSourceX = static_cast<double>(std::rand());
+    const auto kSourceY = static_cast<double>(std::rand());
+    const auto kTargetX = static_cast<double>(std::rand());
+    const auto kTargetY = static_cast<double>(std::rand());
+
+    Point2D plusPoint;
+    Point2D source(kSourceX, kSourceY);
+    Point2D target(kTargetX, kTargetY);
+
+    plusPoint = source + target;
+
+    EXPECT_FLOAT_EQ(plusPoint.GetX(), kSourceX + kTargetX);
+    EXPECT_FLOAT_EQ(plusPoint.GetY(), kSourceY + kTargetY);
+  }
+}
+
+TEST(GeometryPoint2D, OperatorMinus) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kSourceX = static_cast<double>(std::rand());
+    const auto kSourceY = static_cast<double>(std::rand());
+    const auto kTargetX = static_cast<double>(std::rand());
+    const auto kTargetY = static_cast<double>(std::rand());
+
+    Point2D minusPoint;
+    Point2D source(kSourceX, kSourceY);
+    Point2D target(kTargetX, kTargetY);
+
+    minusPoint = source - target;
+
+    EXPECT_FLOAT_EQ(minusPoint.GetX(), kSourceX - kTargetX);
+    EXPECT_FLOAT_EQ(minusPoint.GetY(), kSourceY - kTargetY);
+  }
+}
+
+TEST(GeometryPoint2D, OperatorPluseEqual) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kSourceX = static_cast<double>(std::rand());
+    const auto kSourceY = static_cast<double>(std::rand());
+    const auto kTargetX = static_cast<double>(std::rand());
+    const auto kTargetY = static_cast<double>(std::rand());
+
+    Point2D source(kSourceX, kSourceY);
+    Point2D target(kTargetX, kTargetY);
+    source += target;
+
+    EXPECT_FLOAT_EQ(source.GetX(), kSourceX + kTargetX);
+    EXPECT_FLOAT_EQ(source.GetY(), kSourceY + kTargetY);
+  }
+}
+
+TEST(GeometryPoint2D, OperatorMinusEqual) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kSourceX = static_cast<double>(std::rand());
+    const auto kSourceY = static_cast<double>(std::rand());
+    const auto kTargetX = static_cast<double>(std::rand());
+    const auto kTargetY = static_cast<double>(std::rand());
+
+    Point2D source(kSourceX, kSourceY);
+    Point2D target(kTargetX, kTargetY);
+
+    source -= target;
+
+    EXPECT_FLOAT_EQ(source.GetX(), kSourceX - kTargetX);
+    EXPECT_FLOAT_EQ(source.GetY(), kSourceY - kTargetY);
+  }
+}
+
+TEST(GeometryPoint2D, OperatorMultiply) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kSourceX = static_cast<double>(std::rand());
+    const auto kSourceY = static_cast<double>(std::rand());
+    const auto kMutiple = static_cast<double>(std::rand());
+
+    Point2D multipliedPoint;
+    Point2D source(kSourceX, kSourceY);
+    multipliedPoint = source * kMutiple;
+
+    EXPECT_FLOAT_EQ(multipliedPoint.GetX(), kSourceX * kMutiple);
+    EXPECT_FLOAT_EQ(multipliedPoint.GetY(), kSourceY * kMutiple);
+  }
+}
+
+TEST(GeometryPoint2D, OperatorDivide) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kSourceX = static_cast<double>(std::rand());
+    const auto kSourceY = static_cast<double>(std::rand());
+    const auto kDivide = static_cast<double>(std::rand());
+
+    Point2D DividedPoint;
+    Point2D source(kSourceX, kSourceY);
+    DividedPoint = source / kDivide;
+
+    EXPECT_FLOAT_EQ(DividedPoint.GetX(), kSourceX / kDivide);
+    EXPECT_FLOAT_EQ(DividedPoint.GetY(), kSourceY / kDivide);
+  }
+}
+
+TEST(GeometryPoint2D, OperatorEqual) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kSourceX = static_cast<double>(std::rand());
+    const auto kSourceY = static_cast<double>(std::rand());
+    const auto kTargetX = static_cast<double>(std::rand());
+    const auto kTargetY = static_cast<double>(std::rand());
+
+    Point2D source(kSourceX, kSourceY);
+    Point2D target(kTargetX, kTargetY);
+
+    EXPECT_FLOAT_EQ(((kSourceX == kTargetX) & (kSourceY == kTargetY)),
+                    source == target);
+  }
+}
+
+TEST(GeometryPoint2D, OperatorNotEqual) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kSourceX = static_cast<double>(std::rand());
+    const auto kSourceY = static_cast<double>(std::rand());
+    const auto kTargetX = static_cast<double>(std::rand());
+    const auto kTargetY = static_cast<double>(std::rand());
+
+    Point2D source(kSourceX, kSourceY);
+    Point2D target(kTargetX, kTargetY);
+
+    EXPECT_FLOAT_EQ(((kSourceX != kTargetX) || (kSourceY != kTargetY)),
+                    source != target);
+  }
+}
+
 }  // namespace nodazi::geometry
