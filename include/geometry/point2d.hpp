@@ -94,34 +94,34 @@ class Point2D {
   [[nodiscard]] auto GetY() const -> double;
 
   /**
-   * @brief
+   * @brief Plus this and other, and set their values to another Class
    * @param other
    * @return Point2D class = this + other
    */
   auto operator+(const Point2D& other) const -> Point2D;
 
   /**
-   * @brief
+   * @brief Minus this and other, and set their values to another Class
    * @param other
    * @return Point2D class = this - other
    */
   auto operator-(const Point2D& other) const -> Point2D;
 
   /**
-   * @brief
+   * @brief this += other
    * @param other
-   * @return _x += other._x & _y += other._y
+   * @return x_ += other.x_ & y_ += other.y_
    */
   auto operator+=(const Point2D& other) -> void;
 
   /**
-   * @brief
+   * @brief this -= other
    * @param other
-   * @return _x -= other._x & _y -= other._y
+   * @return x_ -= other.x_ & y_ -= other.y_
    */
   auto operator-=(const Point2D& other) -> void;
   /**
-   * @brief
+   * @brief this's x_,y scalar
    * @param other
    * @return Point2D class = this * scalar
    */
@@ -135,18 +135,17 @@ class Point2D {
 
   /**
    * @brief
-   *
    * @param other
    * @return true if this == other
    * @return false if this != other
    */
   auto operator==(const Point2D& other) const -> bool;
+
   /**
    * @brief
-   *
    * @param other
-   * @return true if this == other
-   * @return false if this != other
+   * @return true if this != other
+   * @return false if this == other
    */
   auto operator!=(const Point2D& other) const -> bool;
 
