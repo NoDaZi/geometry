@@ -101,8 +101,8 @@ class Point2D {
   auto operator+(const Point2D& other) -> void;
   auto operator-(const Point2D& other) -> void;
 
-  auto operator+=(const Point2D& other) -> Point2D&;
-  auto operator-=(const Point2D& other) -> Point2D&;
+  auto operator+=(const Point2D& other) -> void;
+  auto operator-=(const Point2D& other) -> void;
 
   auto operator*(double scalar) const -> Point2D;
   auto operator/(double scalar) const -> Point2D;

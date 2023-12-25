@@ -39,12 +39,12 @@ auto Point2D::SetX(double input_x) -> void { x_ = input_x; }
 
 auto Point2D::SetY(double input_y) -> void { y_ = input_y; }
 
-auto Point2D::operator+(const Point2D& other) -> void {
+auto Point2D::operator+=(const Point2D& other) -> void {
   x_ += other.x_;
   y_ += other.y_;
 }
 
-auto Point2D::operator-(const Point2D& other) -> void {
+auto Point2D::operator-=(const Point2D& other) -> void {
   x_ -= other.x_;
   y_ -= other.y_;
 }

@@ -111,7 +111,7 @@ TEST(GeometryPoint2D, SetY) {
     EXPECT_FLOAT_EQ(kSourceY, source.GetY());
   }
 }
-TEST(GeometryPoint2D, OperatorPlus) {
+TEST(GeometryPoint2D, OperatorPluseEqual) {
   for (uint32_t i = 0; i < kTestCount; ++i) {
     const auto kSourceX = static_cast<double>(std::rand());
     const auto kSourceY = static_cast<double>(std::rand());
@@ -122,13 +122,13 @@ TEST(GeometryPoint2D, OperatorPlus) {
     Point2D target(kTargetX, kTargetY);
     source.SetY(kSourceY);
 
-    source + target;
+    source += target;
 
     EXPECT_FLOAT_EQ(source.GetX(), kSourceX + kTargetX);
     EXPECT_FLOAT_EQ(source.GetY(), kSourceY + kTargetY);
   }
 }
-TEST(GeometryPoint2D, OperatorMinus) {
+TEST(GeometryPoint2D, OperatorMinusEqual) {
   for (uint32_t i = 0; i < kTestCount; ++i) {
     const auto kSourceX = static_cast<double>(std::rand());
     const auto kSourceY = static_cast<double>(std::rand());
@@ -139,7 +139,7 @@ TEST(GeometryPoint2D, OperatorMinus) {
     Point2D target(kTargetX, kTargetY);
     source.SetY(kSourceY);
 
-    source - target;
+    source -= target;
 
     EXPECT_FLOAT_EQ(source.GetX(), kSourceX - kTargetX);
     EXPECT_FLOAT_EQ(source.GetY(), kSourceY - kTargetY);
