@@ -96,12 +96,27 @@ class Point2D {
   /**
    * @brief
    * @param other
-   * @return _x += other._x & _y += other._y
+   * @return Point2D class = this + other
    */
   auto operator+(const Point2D& other) -> Point2D;
+  /**
+   * @brief
+   * @param other
+   * @return Point2D class = this - other
+   */
   auto operator-(const Point2D& other) -> Point2D;
 
+  /**
+   * @brief
+   * @param other
+   * @return _x += other._x & _y += other._y
+   */
   auto operator+=(const Point2D& other) -> void;
+  /**
+   * @brief
+   * @param other
+   * @return _x -= other._x & _y -= other._y
+   */
   auto operator-=(const Point2D& other) -> void;
 
   auto operator*(double scalar) const -> Point2D;
