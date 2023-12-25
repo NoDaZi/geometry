@@ -10,6 +10,8 @@
 // Copyright (c) 2023 Programmers, All Rights Reserved.
 // Authors : DaHyun Noh
 
+#include "geometry/distance.hpp"
+
 #include <cmath>
 #include <limits>
 #include <stdexcept>
@@ -20,4 +22,16 @@ namespace {
 constexpr uint32_t kTestCount = 10000U;
 }
 
-namespace nodazi::geometry {}
+namespace nodazi::geometry {
+
+TEST(GeometryDistance, Constructor) {
+  Distance distance1;
+  Distance distance2(distance1);
+  Distance distance3(std::move(Distance()));
+}
+TEST(GeometryPoint2D, AssignmentOperator) {
+  Distance Distance1;
+  auto Distance2 = Distance1;
+  auto Distance3 = std::move(Distance());
+}
+}  // namespace nodazi::geometry
