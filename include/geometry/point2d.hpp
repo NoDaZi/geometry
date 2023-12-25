@@ -121,20 +121,20 @@ class Point2D {
    */
   auto operator-=(const Point2D& other) -> void;
   /**
-   * @brief this's x_,y scalar
+   * @brief Multiply x,y values with scalar
    * @param other
    * @return Point2D class = this * scalar
    */
   auto operator*(double scalar) const -> Point2D;
   /**
-   * @brief
+   * @brief Divide x,y values with scalar
    * @param other
    * @return Point2D class = this / scalar
    */
   auto operator/(double scalar) const -> Point2D;
 
   /**
-   * @brief
+   * @brief Return a boolean indicating whether two classes are equal.
    * @param other
    * @return true if this == other
    * @return false if this != other
@@ -142,7 +142,7 @@ class Point2D {
   auto operator==(const Point2D& other) const -> bool;
 
   /**
-   * @brief
+   * @brief Return a boolean indicating whether two classes are not equal.
    * @param other
    * @return true if this != other
    * @return false if this == other
