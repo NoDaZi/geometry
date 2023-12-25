@@ -119,7 +119,7 @@ ${${PROJECT_NAME}_INCLUDE_PATH}
 # )
 # add_dependencies(${PROJECT_NAME}
 
-#include(cmake/create_documents.cmake)
+include(cmake/create_documents.cmake)
 
 # ! Add dependencies here
 # )

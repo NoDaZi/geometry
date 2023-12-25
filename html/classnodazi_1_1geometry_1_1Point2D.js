@@ -11,13 +11,13 @@ var classnodazi_1_1geometry_1_1Point2D =
     [ "operator!=", "classnodazi_1_1geometry_1_1Point2D.html#a390a647706fb56efad0207c0b4472cb2", null ],
     [ "operator*", "classnodazi_1_1geometry_1_1Point2D.html#a80c393d665e1f4a58a6cfdaaca18ca05", null ],
     [ "operator+", "classnodazi_1_1geometry_1_1Point2D.html#ae683760e6bc831bf3c7af2d1d596c48e", null ],
-    [ "operator+=", "classnodazi_1_1geometry_1_1Point2D.html#a034631b6fb8b18afa2f239d04d1fcfef", null ],
+    [ "operator+=", "classnodazi_1_1geometry_1_1Point2D.html#a55404d0a30ac5a69bf895dc8739b22c4", null ],
     [ "operator-", "classnodazi_1_1geometry_1_1Point2D.html#a2d09904d724d66ba7d8773db313b2689", null ],
-    [ "operator-=", "classnodazi_1_1geometry_1_1Point2D.html#a5b75b8e702474042acc4fcd98ee0780a", null ],
+    [ "operator-=", "classnodazi_1_1geometry_1_1Point2D.html#a517a9de849cccfc2b1d11413df568b2b", null ],
     [ "operator/", "classnodazi_1_1geometry_1_1Point2D.html#aa344c5a2e0bb05e2681b42a626539427", null ],
     [ "operator=", "classnodazi_1_1geometry_1_1Point2D.html#a8005565301ed825551e6eb5cd7bf8a37", null ],
     [ "operator=", "classnodazi_1_1geometry_1_1Point2D.html#a119c7dcc555b948c2e2b03d321f86f71", null ],
     [ "operator==", "classnodazi_1_1geometry_1_1Point2D.html#a702b4ec9774eeb18939a95668dcd4a44", null ],
-    [ "SetX", "classnodazi_1_1geometry_1_1Point2D.html#a9cd6ebb174a5b60665cc96f657ffc52b", null ],
-    [ "SetY", "classnodazi_1_1geometry_1_1Point2D.html#a1719e6bbdcabf80a3729b708b30e85ab", null ]
+    [ "SetX", "classnodazi_1_1geometry_1_1Point2D.html#ae3f6b23490e50b340ef577c1c13056cf", null ],
+    [ "SetY", "classnodazi_1_1geometry_1_1Point2D.html#afbcffcce0256180e7b6f7f8a01f76a9b", null ]
 ];
