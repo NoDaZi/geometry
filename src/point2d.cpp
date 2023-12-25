@@ -44,4 +44,8 @@ auto Point2D::operator+(const Point2D& other) -> void {
   y_ += other.y_;
 }
 
+auto Point2D::operator-(const Point2D& other) -> void {
+  x_ -= other.x_;
+  y_ -= other.y_;
+}
 }  // namespace nodazi::geometry
