@@ -69,4 +69,19 @@ auto Point2D::operator*(double scalar) const -> Point2D {
   return multipliedPoint2D;
 }
 
+auto Point2D::operator/(double scalar) const -> Point2D {
+  Point2D dividedPoint2D;
+  dividedPoint2D.x_ = x_ / scalar;
+  dividedPoint2D.y_ = y_ / scalar;
+  return dividedPoint2D;
+}
+
+auto Point2D::operator==(const Point2D& other) const -> bool {
+  return ((x_ == other.x_) & (y_ == other.y_));
+}
+
+auto Point2D::operator!=(const Point2D& other) const -> bool {
+  return !Point2D::operator==(other);
+}
+
 }  // namespace nodazi::geometry
