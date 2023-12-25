@@ -111,5 +111,22 @@ TEST(GeometryPoint2D, SetY) {
     EXPECT_FLOAT_EQ(kSourceY, source.GetY());
   }
 }
+TEST(GeometryPoint2D, OperatorPlus) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kSourceX = static_cast<double>(std::rand());
+    const auto kSourceY = static_cast<double>(std::rand());
+    const auto kTargetX = static_cast<double>(std::rand());
+    const auto kTargetY = static_cast<double>(std::rand());
+
+    Point2D source(kSourceX, kSourceY);
+    Point2D target(kTargetX, kTargetY);
+    source.SetY(kSourceY);
+
+    source + target;
+
+    EXPECT_FLOAT_EQ(source.GetX(), kSourceX + kTargetX);
+    EXPECT_FLOAT_EQ(source.GetY(), kSourceY + kTargetY);
+  }
+}
 
 }  // namespace nodazi::geometry
