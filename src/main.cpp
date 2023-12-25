@@ -1,5 +1,5 @@
 /**
- *@file geometry/point2d.cpp
+ *@file geometry/src/main.cpp
  *@author DaHyun Noh (dk3146@naver.com)
  *@brief Point class developments with 2-dimension
  *@version 1.0.0
