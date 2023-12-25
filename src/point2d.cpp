@@ -39,18 +39,18 @@ auto Point2D::SetX(double input_x) -> void { x_ = input_x; }
 
 auto Point2D::SetY(double input_y) -> void { y_ = input_y; }
 
-auto Point2D::operator+(const Point2D& other) -> Point2D {
-  Point2D addedPoint2D;
-  addedPoint2D.x_ = x_ + other.x_;
-  addedPoint2D.y_ = y_ + other.y_;
-  return addedPoint2D;
+auto Point2D::operator+(const Point2D& other) const -> Point2D {
+  Point2D plusPoint2D;
+  plusPoint2D.x_ = x_ + other.x_;
+  plusPoint2D.y_ = y_ + other.y_;
+  return plusPoint2D;
 }
 
-auto Point2D::operator-(const Point2D& other) -> Point2D {
-  Point2D addedPoint2D;
-  addedPoint2D.x_ = x_ - other.x_;
-  addedPoint2D.y_ = y_ - other.y_;
-  return addedPoint2D;
+auto Point2D::operator-(const Point2D& other) const -> Point2D {
+  Point2D minusPoint2D;
+  minusPoint2D.x_ = x_ - other.x_;
+  minusPoint2D.y_ = y_ - other.y_;
+  return minusPoint2D;
 }
 auto Point2D::operator+=(const Point2D& other) -> void {
   x_ += other.x_;
@@ -61,4 +61,12 @@ auto Point2D::operator-=(const Point2D& other) -> void {
   x_ -= other.x_;
   y_ -= other.y_;
 }
+
+auto Point2D::operator*(double scalar) const -> Point2D {
+  Point2D multipliedPoint2D;
+  multipliedPoint2D.x_ = x_ * scalar;
+  multipliedPoint2D.y_ = y_ * scalar;
+  return multipliedPoint2D;
+}
+
 }  // namespace nodazi::geometry
