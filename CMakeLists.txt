@@ -94,7 +94,6 @@ add_subdirectory(${${PROJECT_NAME}_APPLICATION_PATH})
 set(${PROJECT_NAME}_SOURCE_FILES
   src/point2d.cpp
   src/distance.cpp
-  src/main.cpp
   # ! Add source files here
 )
 
@@ -119,7 +118,7 @@ ${${PROJECT_NAME}_INCLUDE_PATH}
 # )
 # add_dependencies(${PROJECT_NAME}
 
-include(cmake/create_documents.cmake)
+#include(cmake/create_documents.cmake)
 
 # ! Add dependencies here
 # )
