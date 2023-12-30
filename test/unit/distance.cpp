@@ -132,7 +132,7 @@ TEST(GeometryDistance, OperatorNotEqual) {
   EXPECT_FALSE(distance_by_nano != distance);
 }
 
-TEST(GeometryDistance, OperatorBigger) {
+TEST(GeometryDistance, OperatorSmaller) {
   for (uint32_t i = 0; i < kTestCount; ++i) {
     const auto distance1_value = std::rand();
     const auto distance2_value = std::rand();
@@ -144,7 +144,7 @@ TEST(GeometryDistance, OperatorBigger) {
   }
 }
 
-TEST(GeometryDistance, OperatorBiggerEqual) {
+TEST(GeometryDistance, OperatorSmallerEqual) {
   for (uint32_t i = 0; i < kTestCount; ++i) {
     const auto distance1_value = std::rand();
     const auto distance2_value = std::rand();
@@ -153,6 +153,30 @@ TEST(GeometryDistance, OperatorBiggerEqual) {
     Distance distance2(distance2_value);
 
     EXPECT_EQ((distance1_value <= distance2_value), (distance1 <= distance2));
+  }
+}
+
+TEST(GeometryDistance, OperatorBigger) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto distance1_value = std::rand();
+    const auto distance2_value = std::rand();
+
+    Distance distance1(distance1_value);
+    Distance distance2(distance2_value);
+
+    EXPECT_EQ((distance1_value > distance2_value), (distance1 > distance2));
+  }
+}
+
+TEST(GeometryDistance, OperatorBiggerEqual) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto distance1_value = std::rand();
+    const auto distance2_value = std::rand();
+
+    Distance distance1(distance1_value);
+    Distance distance2(distance2_value);
+
+    EXPECT_EQ((distance1_value >= distance2_value), (distance1 >= distance2));
   }
 }
 
