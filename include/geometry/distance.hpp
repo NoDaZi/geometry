@@ -96,16 +96,39 @@ class Distance {
   auto operator==(const Distance& other) const -> bool;
   /**
    * @brief Compare with other distance object for not equality.
-   * @param other Distance
+   * @param other Distance.
    * @return true If Distance is not Equal
    * @return false If Distance is Equal
    */
   auto operator!=(const Distance& other) const -> bool;
 
+  /**
+   * @brief Compare with other distance object for smaller
+   * @param other Distance.
+   * @return true If Distance is smaller.
+   * @return false If Distance is not smaller.
+   */
   auto operator<(const Distance& other) const -> bool;
+  /**
+   * @brief Compare with other distance object for equal or smaller.
+   * @param other Distance.
+   * @return true If Distance is equal or smaller.
+   * @return false If Distance is not equal smaller.
+   */
   auto operator<=(const Distance& other) const -> bool;
-
+  /**
+   * @brief Compare with other distance object for bigger.
+   * @param other Distance.
+   * @return true If Distance is bigger.
+   * @return false If Distance is not bigger.
+   */
   auto operator>(const Distance& other) const -> bool;
+  /**
+   * @brief Compare with other distance object for equal or bigger
+   * @param other Distance
+   * @return true If Distance is equal or bigger.
+   * @return false If Distance is not equal or bigger.
+   */
   auto operator>=(const Distance& other) const -> bool;
 
   /**
