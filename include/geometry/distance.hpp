@@ -13,14 +13,16 @@
 #ifndef NODAZI__GEOMETRY__DISTANCE_HPP_
 #define NODAZI__GEOMETRY__DISTANCE_HPP_
 
+#include <cstdint>
+
 namespace nodazi::geometry {
 /**
- * @brief
+ * @brief The class for abstract distance
  */
 class Distance {
  public:
   /**
-   * @brief
+   * @brief The enum class for distance type.
    */
   enum class Type {
     kKilometer = 0,
@@ -30,6 +32,7 @@ class Distance {
     kMicrometer = 4,
     kNanometer = 5
   };
+
   /**
    * @brief Construct a new Distance object
    */
@@ -47,15 +50,85 @@ class Distance {
    * @param other
    */
   Distance(const Distance& other) = default;
+
   /**
-   * @brief Construct a new Distance object
+   * @brief Destroy a new Distance object
    */
   Distance(Distance&& other) noexcept = default;
-
+  /**
+   * @brief Destroy the Distance object
+   *
+   */
   virtual ~Distance() = default;
+
+  /**
+   * @brief
+   * @param other
+   * @return Distance&
+   */
+  auto operator=(const Distance& other) -> Distance& = default;
+
+  /**
+   * @brief
+   * @param other
+   * @return Distance&
+   */
+  auto operator=(Distance&& other) -> Distance& = default;
+
+  /**
+   * @brief Get the Distance Value for distance type.
+   * @param input_type The distance type.
+   * @return double The distance value.
+   */
+  [[nodiscard]] auto GetValue(const Type& input_type) const -> double;
+  /**
+   * @brief Set the Distance value for distance type.
+   * @param input_value  The distance value.
+   * @param input_type  The distance type.
+   */
+  auto SetValue(double input_value, const Type& input_type) -> void;
+  /**
+   * @brief Compare with other distance object for equality.
+   * @param other Distance
+   * @return true If Distance is Equal
+   * @return false If Distance is not Equal
+   */
+  auto operator==(const Distance& other) const -> bool;
+  /**
+   * @brief Compare with other distance object for not equality.
+   * @param other Distance
+   * @return true If Distance is not Equal
+   * @return false If Distance is Equal
+   */
+  auto operator!=(const Distance& other) const -> bool;
+
+  auto operator<(const Distance& other) const -> bool;
+  auto operator<=(const Distance& other) const -> bool;
+
+  auto operator>(const Distance& other) const -> bool;
+  auto operator>=(const Distance& other) const -> bool;
+
+  /**
+   * @brief Add other distance object.
+   * @param other The other distance object.
+   * @return Distance The result of addition.
+   */
+  auto operator+(const Distance& other) const -> Distance;
+  auto operator-(const Distance& other) const -> Distance;
+
+  auto operator*(double scale) const -> Distance;
+  auto operator/(double scale) const -> Distance;
+
+  auto operator+=(const Distance& other) const -> void;
+  auto operator-=(const Distance& other) const -> void;
+
+  auto operator*=(double scale) const -> void;
+  auto operator/=(double scale) const -> void;
 
  protected:
  private:
+  int64_t nanometer_{0};
+
 }
 // 거리에 대한 정보를 저장하고 연산하는 클래스
 // 추상화를 통해 구현을 숨기고, 사용자에게 필요한 기능만 제공한다.
