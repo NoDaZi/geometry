@@ -198,4 +198,94 @@ TEST(GeometryDistance, OperatorPlus) {
                    kInputValue * 2.0);
 }
 
+TEST(GeometryDistance, OperatorMinus) {
+  const auto kInputValue = static_cast<double>(2038.0);
+  Distance distance_by_kilo(kInputValue, Distance::Type::kKilometer);
+  Distance distance(kInputValue * 1.0e+3, Distance::Type::kMeter);
+  Distance distance_by_nano(kInputValue * 1.0e+12, Distance::Type::kNanometer);
+
+  const auto distance1 = distance_by_kilo - distance;
+  const auto distance2 = distance_by_kilo - distance_by_nano;
+  const auto distance3 = distance - distance_by_nano;
+
+  EXPECT_DOUBLE_EQ(distance1.GetValue(Distance::Type::kKilometer), 0.0);
+  EXPECT_DOUBLE_EQ(distance2.GetValue(Distance::Type::kKilometer), 0.0);
+  EXPECT_DOUBLE_EQ(distance3.GetValue(Distance::Type::kKilometer), 0.0);
+}
+
+TEST(GeometryDistance, OperatorMultiplication) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kDistanceValue = std::rand();
+    const auto kScale = 3.0;
+    Distance distance(kDistanceValue, Distance::Type::kNanometer);
+
+    EXPECT_EQ((distance * kScale).GetValue(Distance::Type::kNanometer),
+              kDistanceValue * kScale);
+  }
+}
+
+TEST(GeometryDistance, OperatorDivision) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kDistanceValue = double(std::rand());
+    const auto kScale = 2.0;
+    Distance distance(kDistanceValue, Distance::Type::kMicrometer);
+
+    EXPECT_EQ((distance / kScale).GetValue(Distance::Type::kMicrometer),
+              kDistanceValue / kScale * 1.0e+3);
+  }
+}
+
+TEST(GeometryDistance, OperatorPlusEqual) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kDistanceValue1 = double(std::rand());
+    const auto kDistanceValue2 = double(std::rand());
+
+    Distance distance1(kDistanceValue1, Distance::Type::kNanometer);
+    Distance distance2(kDistanceValue2, Distance::Type::kNanometer);
+
+    distance1 += distance2;
+    EXPECT_EQ(distance1.GetValue(Distance::Type::kNanometer),
+              kDistanceValue1 + kDistanceValue2);
+  }
+}
+
+TEST(GeometryDistance, OperatorMinusEqual) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kDistanceValue1 = double(std::rand());
+    const auto kDistanceValue2 = double(std::rand());
+
+    Distance distance1(kDistanceValue1, Distance::Type::kNanometer);
+    Distance distance2(kDistanceValue2, Distance::Type::kNanometer);
+
+    distance1 -= distance2;
+    EXPECT_EQ(distance1.GetValue(Distance::Type::kNanometer),
+              kDistanceValue1 - kDistanceValue2);
+  }
+}
+
+TEST(GeometryDistance, OperatorMultiplicationEqual) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kDistanceValue = std::rand();
+    const auto kScale = 3.0;
+    Distance distance(kDistanceValue, Distance::Type::kNanometer);
+
+    distance *= kScale;
+
+    EXPECT_EQ(distance.GetValue(Distance::Type::kNanometer),
+              kDistanceValue * kScale);
+  }
+}
+
+TEST(GeometryDistance, OperatorDivisionEqual) {
+  for (uint32_t i = 0; i < kTestCount; ++i) {
+    const auto kDistanceValue = std::rand();
+    const auto kScale = 2.0;
+    Distance distance(kDistanceValue, Distance::Type::kMicrometer);
+
+    distance /= kScale;
+
+    EXPECT_EQ(distance.GetValue(Distance::Type::kMicrometer),
+              kDistanceValue / kScale);
+  }
+}
 }  // namespace nodazi::geometry
